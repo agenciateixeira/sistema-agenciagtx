@@ -203,9 +203,30 @@ export const predictiveTraining = [
 ];
 
 export const webhooks = [
-  { id: 'wh-1', name: 'CRM HubSpot', event: 'conversion.created', status: 'Ativo', lastDelivery: 'há 2 min' },
-  { id: 'wh-2', name: 'Slack #alertas', event: 'alert.triggered', status: 'Ativo', lastDelivery: 'há 15 min' },
-  { id: 'wh-3', name: 'Notion - Diretoria', event: 'report.ready', status: 'Pendente', lastDelivery: 'há 1 dia' }
+  {
+    id: 'wh-1',
+    name: 'CRM HubSpot',
+    event: 'conversion.created',
+    events: ['conversion.created', 'session.completed'],
+    status: 'Ativo',
+    lastDelivery: 'há 2 min'
+  },
+  {
+    id: 'wh-2',
+    name: 'Slack #alertas',
+    event: 'alert.triggered',
+    events: ['alert.triggered', 'performance.drop'],
+    status: 'Ativo',
+    lastDelivery: 'há 15 min'
+  },
+  {
+    id: 'wh-3',
+    name: 'Notion - Diretoria',
+    event: 'report.ready',
+    events: ['report.ready', 'export.completed'],
+    status: 'Pendente',
+    lastDelivery: 'há 1 dia'
+  }
 ];
 
 export const chatInbox = [
